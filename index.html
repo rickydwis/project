@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulang Tahun Spesial Untukmu</title>
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffebee;
+            color: #d32f2f;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            padding: 40px 0;
+            background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            font-style: italic;
+        }
+        
+        .photo-section {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .photo-grid img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .photo-grid img:hover {
+            transform: scale(1.05);
+        }
+        
+        .message-section {
+            background: linear-gradient(45deg, #a18cd1 0%, #fbc2eb 100%);
+            padding: 30px;
+            border-radius: 15px;
+            color: white;
+            margin: 30px 0;
+        }
+        
+        .wish-button {
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 20px 0;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(233, 30, 99, 0.3);
+        }
+        
+        .wish-button:hover {
+            background-color: #c2185b;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(233, 30, 99, 0.4);
+        }
+        
+        .hidden-message {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            animation: fadeIn 1s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .heart {
+            color: #e91e63;
+            font-size: 1.5em;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+            100% { transform: scale(1); }
+        }
+        
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8em; }
+            .photo-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Selamat Ulang Tahun, <span id="name">Sayangku</span>!</h1>
+            <p class="subtitle">Hari ini adalah hari spesial untuk orang yang paling spesial di hidupku</p>
+            <div class="heart">❤</div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="photo-section">
+            <h2>Kenangan Indah Kita</h2>
+            <p>Beberapa momen berharga yang ingin aku abadikan selamanya...</p>
+            
+            <div class="photo-grid">
+                <!-- Ganti dengan foto-foto kalian -->
+                <img src="https://via.placeholder.com/300x200?text=Foto+Kita+1" alt="Foto kita">
+                <img src="https://via.placeholder.com/300x200?text=Foto+Kita+2" alt="Foto kita">
+                <img src="https://via.placeholder.com/300x200?text=Foto+Kita+3" alt="Foto kita">
+                <img src="https://via.placeholder.com/300x200?text=Foto+Kita+4" alt="Foto kita">
+            </div>
+        </section>
+        
+        <section class="message-section">
+            <h2>Untukmu di Hari Spesialmu</h2>
+            <p>Setiap hari bersamamu adalah anugerah, tapi hari ini adalah hari yang paling istimewa...</p>
+            
+            <button class="wish-button" onclick="showMessage()">Klik untuk Pesan Spesial</button>
+            
+            <div id="specialMessage" class="hidden-message">
+                <p>Sayangku,</p>
+                <p>Di hari ulang tahunmu ini, aku ingin mengucapkan terima kasih telah menjadi bagian terindah dalam hidupku. Setiap tawa, setiap pelukan, dan setiap momen bersamamu adalah hadiah terbaik yang pernah aku terima.</p>
+                <p>Aku berharap tahun ini membawa lebih banyak kebahagiaan, kesuksesan, dan kesehatan untukmu. Semoga semua impianmu terkabul dan kita bisa membuat lebih banyak kenangan indah bersama.</p>
+                <p>Aku mencintaimu lebih dari apapun di dunia ini.</p>
+                <p>Selamat ulang tahun, sayang! <span class="heart">❤</span></p>
+                <p>- Orang yang selalu mencintaimu</p>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Dibuat dengan penuh cinta untuk ulang tahunmu yang spesial</p>
+            <p>© 2023 - Hadiah Ulang Tahun Digital</p>
+        </div>
+    </footer>
+    
+    <script>
+        // JavaScript untuk interaksi
+        function showMessage() {
+            const message = document.getElementById('specialMessage');
+            const button = document.querySelector('.wish-button');
+            
+            if (message.style.display === 'block') {
+                message.style.display = 'none';
+                button.textContent = 'Klik untuk Pesan Spesial';
+            } else {
+                message.style.display = 'block';
+                button.textContent = '❤ Pesan Terbuka ❤';
+                
+                // Animasi confetti sederhana
+                createConfetti();
+            }
+        }
+        
+        function createConfetti() {
+            const colors = ['#e91e63', '#00bcd4', '#ffeb3b', '#4caf50', '#9c27b0'];
+            const container = document.querySelector('.container');
+            
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.style.position = 'absolute';
+                confetti.style.width = '10px';
+                confetti.style.height = '10px';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.borderRadius = '50%';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.top = '-10px';
+                confetti.style.opacity = Math.random();
+                confetti.style.transform = 'rotate(' + Math.random() * 360 + 'deg)';
+                
+                container.appendChild(confetti);
+                
+                const animationDuration = Math.random() * 3 + 2;
+                
+                confetti.animate([
+                    { top: '-10px', opacity: 1 },
+                    { top: '100vh', opacity: 0 }
+                ], {
+                    duration: animationDuration * 1000,
+                    easing: 'cubic-bezier(0.1, 0.8, 0.9, 1)'
+                });
+                
+                setTimeout(() => {
+                    confetti.remove();
+                }, animationDuration * 1000);
+            }
+        }
+        
+        // Personalisasi nama (bisa diubah sesuai nama kekasih)
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        if (name) {
+            document.getElementById('name').textContent = name;
+        }
+    </script>
+</body>
+</html>
